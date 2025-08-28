@@ -1,10 +1,11 @@
+version: "3"
 services:
   client:
-    image: 'marc89763/multi-client'
+    image: "marc89763/multi-client"
     mem_limit: 128m
     hostname: client
   server:
-    image: 'marc89763/multi-server'
+    image: "marc89763/multi-server"
     mem_limit: 128m
     hostname: api
     environment:
@@ -16,15 +17,15 @@ services:
       - PGPASSWORD=$PGPASSWORD
       - PGPORT=$PGPORT
   worker:
-    image: 'marc89763/multi-worker'
+    image: "marc89763/multi-worker"
     mem_limit: 128m
     hostname: worker
     environment:
       - REDIS_HOST=$REDIS_HOST
       - REDIS_PORT=$REDIS_PORT
   nginx:
-    image: 'marc89763/multi-nginx'
+    image: "marc89763/multi-nginx"
     mem_limit: 128m
     hostname: nginx
     ports:
-      - '80:80'
+      - "80:80"
