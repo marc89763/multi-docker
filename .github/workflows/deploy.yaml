@@ -31,7 +31,7 @@ jobs:
         with:
           aws_access_key: ${{ secrets.AWS_ACCESS_KEY }}
           aws_secret_key: ${{ secrets.AWS_SECRET_KEY }}
-          application_name: multi-docker
+          application_name: multidocker
           environment_name: Multidocker-env
           existing_bucket_name: elasticbeanstalk-us-east-1-666908824756
           region: us-east-1
